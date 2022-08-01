@@ -1,0 +1,17 @@
+{
+    "name": "andre/crud-usuarios",
+    "description": "CRUD de usuarios con php",
+    "authors": [
+        {
+            "name": "andreww221",
+            "email": "andrewbuitrago221@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+
+}

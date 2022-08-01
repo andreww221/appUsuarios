@@ -1,0 +1,14 @@
+
+
+#Configuracion para que nuestro servidor nos rediriga a nuestro front controller
+
+rewriteEngine On
+
+
+#rewriteCond %{REQUEST_FILENAME} !-d
+
+#rewriteCond %{REQUEST_FILENAME} !-f
+
+rewriteRule ^ public/index.php
+
+
