@@ -6,7 +6,7 @@ namespace App\controllers;
 
 
 
-class usuariosController
+class usuarioController
 {
 
 

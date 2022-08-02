@@ -5,6 +5,10 @@ namespace App\database;
 use PDO;
 use PDOException;
 
+/**
+ * Me permite conectarme a la base de datos
+ */
+
 class db
 {
 
@@ -27,7 +31,9 @@ class db
     }
 
 
-
+    /**
+     * Me retorna un objedo PDO para realizar consultas sql
+     */
     public function connectDB(): PDO
     {
 
@@ -45,4 +51,3 @@ class db
         }
     }
 }
-
