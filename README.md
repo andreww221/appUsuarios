@@ -15,5 +15,5 @@
 <li class="has-line-data" data-line-start="14" data-line-end="15">MYSQL / SQL</li>
 </ul>
 
-<img style="width=100px;height:100px" src="https://s4.gifyu.com/images/title-google-chrome-2022-08-05-10-38-06_HTjUVpsF.gif">
+<img style="width=100px;height:100px" src="https://s4.gifyu.com/images/Title-Google-Chrome-2022-08-05-10-38-06.gif">
 </body></html>
