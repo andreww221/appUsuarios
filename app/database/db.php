@@ -42,7 +42,7 @@ class db
 
             $object = new PDO($config, $this->user, $this->password);
 
-            echo "Conexion establecida con exito";
+
 
             return $object;
         } catch (PDOException $e) {

@@ -74,18 +74,18 @@ class usuarioRequests extends db
         foreach ($users as $key => $value) {
 
             $user = new usuarioModel(
-                $value['id'],
                 $value['nombre'],
                 $value['apellidoPaterno'],
                 $value['apellidoMaterno'],
                 $value['telefono'],
+                $value['id']
             );
 
-            array_push($usersArray, $user);
+            array_push($usersArray, $user->returnObject());
         }
 
 
-        return $usersArray;
+        return json_encode($usersArray);
     }
 
 
@@ -99,15 +99,17 @@ class usuarioRequests extends db
         $request = $this->connectionObject->prepare("SELECT * FROM users WHERE id=:id");
         $request->execute(['id' => $id]);
         $response =  $request->fetch(PDO::FETCH_OBJ);
+
         $user = new usuarioModel(
             $response->nombre,
             $response->apellidoPaterno,
             $response->apellidoMaterno,
-            $response->telefono
+            $response->telefono,
+            $response->id
 
         );
 
-        return $user;
+        return json_encode($user->returnObject());
     }
 
 
@@ -135,11 +137,12 @@ class usuarioRequests extends db
         WHERE id=:id");
 
         $request->execute([
+            'id'=>$id,
             'nombre' => $user->getNombre(),
             'apellidoPaterno' => $user->getApellidoPaterno(),
             'apellidoMaterno' => $user->getApellidoMaterno(),
-            'telefono' => $user->getTelefono(),
-            'id'=>$id
+            'telefono' => $user->getTelefono()
+      
         ]);
 
         return "usuario actualizado";

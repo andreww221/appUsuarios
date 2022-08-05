@@ -2,6 +2,8 @@
 
 namespace App\http;
 
+use App\controllers\usuarioController;
+
 
 class request
 {
@@ -24,8 +26,16 @@ class request
     public function requestController()
     {
 
-        $response  =  call_user_func(array(new $this->controller(), $this->method));
+
+
+        $controller = "App\controllers\\{$this->controller}";
+
+
+        $response  =  call_user_func(array(new $controller, $this->method));
+
+        
         return $response;
+
 
     }
 }

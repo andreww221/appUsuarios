@@ -3,21 +3,13 @@
 
 
 require "../vendor/autoload.php";
+require "../app/controllers/usuarioController.php";
 
-use App\Models\usuarioRequests;
-use App\Models\usuarioModel;
-
-
-
-
-$a = new usuarioRequests();
+use App\http\request;
+use App\controllers\usuarioController;
+use App\models\usuarioModel;
 
 
-$b = new usuarioModel(
-    'actua',
-    'actua',
-    'actua',
-    'actua'
-);
+$r = new request();
 
-$a->update(1,$b);
+$r->requestController();

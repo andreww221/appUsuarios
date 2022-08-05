@@ -14,7 +14,7 @@ class usuarioModel
     private $apellidoMaterno;
     private $telefono;
     private $id;
-
+ 
 
 
 
@@ -118,4 +118,18 @@ class usuarioModel
     {
         return $this->id;
     }
+
+
+    public function returnObject(){
+        return array(
+            'nombre'=>$this->nombre,
+            'apellidoPaterno'=>$this->apellidoPaterno,
+            'apellidoMaterno'=>$this->apellidoMaterno,
+            'telefono'=>$this->telefono,
+            'id'=>$this->id
+        );
+    }
+
+
+
 }
